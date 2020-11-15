@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js06_UpperLowerCase.htm - Conversão de string</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso.8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+
+<body>
+	<!-- Linha de Comentário HTML: entrada de dados via formulário -->
+	<h3>Formulário de Consulta de Curso:</h3>
+	<p>
+	<form name="formcurso" action="" method="post">
+		Digite seu Curso: <input type="text" name="f_cursodig" size="8" maxlength="4" /> (SIST) <p></p>
+		<input type="button" name="btn_validar" value="Validar" onclick="cadcurso()" />
+		<input type="reset" name="btn_cancelar" value="Cancelar" /><p></p>
+		Código do Curso: <input type="text" name="f_codcurso" size="15" maxlength="10" />
+	</form>
+		
+	<!-- Código JavaScript -->
+	<script language="Javascript">
+	<!--
+	/* Objetivo: Desenvolver programa com o método toUpperCase().
+	*/
+
+	/* Definição de Variáveis */
+	var js_cursodig;
+
+	/* Função cadcurso() */
+	function cadcurso() {
+		js_cursodig=document.formcurso.f_cursodig.value;
+		if (js_cursodig.toUpperCase() == 'SIST')
+			document.formcurso.f_codcurso.value='SIST001/FB';
+		else
+			window.alert('Curso Inválido!');
+	}
+	
+	//-->
+	</script>
+	<!-- Final da área da linguagem JavaScript -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>URI_TEST.htm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso.8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+
+<body>
+	<script language="javascript">
+	
+		/* Entrada de Dados */
+		n = window.prompt('Informe o número para conversão em horas: ', 'Digite aqui');
+		var h = Math.floor(n / 3600);
+		var m = Math.floor((n % 3600)/60);
+		var s = n - h * 3600 - m * 60;
+		document.write(h + ':' + m + ':' + s);
+
+	//-->
+	</script>
+
+</body>
+</html>

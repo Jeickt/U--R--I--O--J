@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js04_OpTern.htm - Condicional Ternária</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso.8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+
+<body>
+	<script language="javascript">
+	<!--
+	/* Objetivo: Praticar operações condicionais ternárias.
+	*/
+
+	/* Definição de Variáveis */
+	document.write('<p>--------------------------------------------------------');
+	document.write('<p>DEFINIÇÃO E ATRIBUIÇÃO DE VARIÁVEIS:');
+	document.write('<p>var js_num = <b>30</b>; (js_num recebe valor 30)');
+	var js_num = 30;
+
+	/* Aplicação de Operador Ternário utilizaando Operadores Relacionais */
+	document.write('<p>--------------------------------------------------------');
+	document.write('<p>OPERADOR TERNÁRIO <b>?</b> com OPERADORES RELACIONAIS (==, !=, <):');
+
+	document.write('<p>js_num <b>==</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO" - Resposta => ');
+	((js_num == 20) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'));
+
+	document.write('<p>js_num <b>!=</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO" - Resposta => ');
+	((js_num != 20) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'));
+
+	document.write('<p>js_num <b><</b> 50 <b>?</b> "SIM" <b>:</b> "NÃO" - Resposta => ');
+	((js_num < 50) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'));
+
+	/* Aplicação de Operador Ternário utilizaando Expressão Aritmética e Operador Relacional */
+	document.write('<p>--------------------------------------------------------');
+	document.write('<p>OPERADOR TERNÁRIO <b>?</b> com EXPRESSÃO ARITMÉTICA:');
+
+	document.write('<p>js_num <b>-</b> 20 <b>==</b> 0 <b>?</b> "SIM" <b>:</b> "NÃO" - Resposta => ');
+	((js_num - 20) == 0) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>');
+
+	
+	//-->
+	</script>
+	<!-- Final da área da linguagem JavaScript -->
+</body>
+</html>

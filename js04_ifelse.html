@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js04_ifelse.htm - ifelse</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso.8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+
+<body>
+	<script language="javascript">
+	<!--
+	/* Objetivo: Ler dois valores. Independentemente da ordem em que foram digitados, apresentá-los em ordem crescente. Será necessário efetuar a troca de valores.
+	*/
+
+	/* Definição de Variáveis */
+	var js_n1;
+	var js_n2;
+
+	/* Entrada de Dados */
+	js_n1 = parseInt(window.prompt('Informe o primeiro número: ', '00'));
+	js_n2 = parseInt(window.prompt('Informe o segundo número: ', '00'));
+
+	/* Saída de Dados sem classificação*/
+	document.write('Primeiro número digitado = ' + js_n1);
+	document.write('<br>Segundo número digitado = ' + js_n2);
+
+	/* Saída de dados com classificação por decisão condicional if */
+	document.write('<p><b>Classificação em Ordem Crescente: </b>');
+	if (js_n1 < js_n2)
+		document.write(js_n1 + ' e ' + js_n2);
+	else
+		document.write(js_n2 + ' e ' + js_n1);
+
+	//-->
+	</script>
+	<!-- Final da área da linguagem JavaScript -->
+</body>
+</html>

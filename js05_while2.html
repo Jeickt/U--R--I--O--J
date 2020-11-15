@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js05_while2.htm - Repetição com while</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso.8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+
+<body>
+	<script language="javascript">
+	<!--
+	/* Objetivo: Repetição de while com controle do usuário.
+	*/
+
+	/* Definição de Variáveis */
+	var js_contador=1;
+	var js_resposta=true;
+
+	/* Laço de Repetição - while */
+	while (js_resposta) {
+		document.write('<p>' + js_contador + 'ª repetição.')
+		js_contador++;
+		js_resposta = window.confirm('Deseja continuar?')
+	}
+	
+	//-->
+	</script>
+	<!-- Final da área da linguagem JavaScript -->
+</body>
+</html>
