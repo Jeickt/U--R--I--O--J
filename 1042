@@ -1,0 +1,43 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+var valores = input.split(" ");
+var num1 = parseInt(valores[0]);
+var num2 = parseInt(valores[1]);
+var num3 = parseInt(valores[2]);
+var maior, inter, menor;
+
+if (num1 >= num2 && num1 >= num3) {
+    maior = num1;
+    if (num2 >= num3) {
+        inter = num2;
+        menor = num3;
+    }
+    else {
+        inter = num3;
+        menor = num2;
+    }
+}
+else if (num2 >= num3) {
+    maior = num2;
+    if (num3 >= num1) {
+        inter = num3;
+        menor = num1;
+    }
+    else {
+        inter = num1;
+        menor = num3;
+    }
+}
+else {
+    maior = num3;
+    if (num1 >= num2) {
+        inter = num1;
+        menor = num2;
+    }
+    else {
+        inter = num2;
+        menor = num1;
+    }
+}
+
+console.log(menor + '\n' + inter + '\n' + maior + '\n\n' + num1 + '\n' + num2 + '\n' + num3);

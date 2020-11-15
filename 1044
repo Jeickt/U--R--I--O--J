@@ -1,0 +1,10 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+var valores = input.split(" ");
+var num1 = parseInt(valores[0]);
+var num2 = parseInt(valores[1]);
+
+if ((num1 % num2 === 0) || (num2 % num1 === 0))
+    console.log('Sao Multiplos');
+else
+    console.log('Nao sao Multiplos');

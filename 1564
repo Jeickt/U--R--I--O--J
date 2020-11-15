@@ -1,0 +1,11 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var valor = parseInt(lines.shift());
+while (valor >= 0 && valor <= 100) {
+    if (valor === 0)
+        console.log("vai ter copa!");
+    else
+        console.log("vai ter duas!");
+    valor = parseInt(lines.shift());
+}

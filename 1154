@@ -1,0 +1,13 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var num = parseInt(lines[0]);
+var soma = 0, cont = 0;
+
+while (num >= 0) {
+    soma += num;
+    cont++;
+    num = parseInt(lines[cont]);
+}
+
+console.log((soma/cont).toFixed(2));

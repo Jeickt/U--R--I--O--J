@@ -1,0 +1,18 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var num = parseInt(lines[0]);
+var valores = lines[1].split(' ');
+
+var menor = parseInt(valores[0]);
+var posicao = 0;
+
+for (var i = 1; i<num; i++) {
+    if (parseInt(valores[i]) < menor) {
+        menor = parseInt(valores[i]);
+        posicao = i;
+    }
+}
+
+console.log('Menor valor: ' + menor);
+console.log('Posicao: ' + posicao);

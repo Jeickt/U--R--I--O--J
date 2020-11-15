@@ -1,0 +1,13 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+var lines = input.split('\n');
+
+var cont = parseInt(lines[0]);
+
+for (var i=1; i<=cont; i++) {
+    nums = lines[i].split(' ');
+    if (nums[1] === '0')
+        console.log('divisao impossivel');
+    else
+        console.log((parseInt(nums[0])/parseInt(nums[1])).toFixed(1));
+}

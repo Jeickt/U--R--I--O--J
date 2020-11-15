@@ -1,0 +1,16 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var nums = lines[0].split(' ');
+var lado1, lado2, perc, ladoTer, verif;
+var cont = 0;
+
+while (nums[0] !== '0') {
+		lado1 = parseFloat(nums[0]);
+    lado2 = parseFloat(nums[1]);
+    perc = parseFloat(nums[2]);
+    ladoTer = Math.floor(Math.sqrt(lado1 * lado2 * 100.0 / perc));
+    console.log(parseInt(ladoTer));
+    cont++;
+    nums = lines[cont].split(' ');
+}

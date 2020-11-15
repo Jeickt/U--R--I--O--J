@@ -1,0 +1,20 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var f = parseFloat(lines[0]);
+if (f<0 || f>100)
+    console.log('Fora de intervalo');
+else {
+    if (f>75)
+        console.log('Intervalo (75,100]');
+    else {
+        if (f>50)
+            console.log('Intervalo (50,75]');
+        else {
+            if (f>25)
+                console.log('Intervalo (25,50]')
+            else
+                console.log('Intervalo [0,25]')
+        }
+    }
+}

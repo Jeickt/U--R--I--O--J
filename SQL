@@ -1,0 +1,37 @@
+2602 - SELECT name FROM customers WHERE state = 'RS';
+2603 - SELECT name, street FROM customers WHERE city = 'Porto Alegre';
+2604 - SELECT id, name FROM products WHERE price < 10 OR price > 100;
+2605 - SELECT products.name AS name, providers.name AS name 
+FROM products JOIN providers 
+ON products.id_providers = providers.id 
+AND products.id_categories = 6;
+2608 - SELECT MAX(price), MIN(price) FROM products;
+2610 - SELECT ROUND(AVG(price), 2) as price FROM products;
+2613 - SELECT m.id, m.name FROM movies AS m JOIN prices AS p 
+ON m.id_prices = p.id AND p.value < 2;
+2617 - SELECT pd.name, pv.name FROM products AS pd JOIN providers AS pv 
+ON pd.id_providers = pv.id AND pv.name = 'Ajax SA';
+2618 - SELECT pd.name, pv.name, ct.name 
+FROM products AS pd, providers AS pv, categories AS ct 
+WHERE pd.id_providers = pv.id AND pd.id_categories = ct.id 
+AND pv.name = 'Sansul SA' AND ct.name = 'Imported';
+2619 - SELECT pd.name, pv.name, pd.price 
+FROM products AS pd, providers AS pv, categories AS ct 
+WHERE pd.id_providers = pv.id AND pd.id_categories = ct.id 
+AND pd.price > 1000 AND ct.name = 'Super Luxury';
+2620 - SELECT ct.name, od.id FROM customers AS ct, orders AS od 
+WHERE od.id_customers = ct.id 
+AND od.orders_date BETWEEN '2016-01-01' AND '2016-06-30';
+2621 - SELECT pd.name FROM products AS pd, providers AS pv  
+WHERE pd.id_providers = pv.id
+AND pd.amount BETWEEN 10 AND 20 
+AND pv.name LIKE 'P%';
+2622 - SELECT ct.name FROM customers AS ct, legal_person AS lp 
+WHERE lp.id_customers = ct.id;
+2624 - SELECT count(DISTINCT city) FROM customers;
+2743 - SELECT name, LENGTH(name) FROM people 
+ORDER BY LENGTH(name) DESC;
+2744 - SELECT id, password, MD5(password) FROM account;
+2745 - SELECT name, ROUND(salary/10, 2) FROM people 
+WHERE salary > 3000;
+2746 - SELECT REPLACE(name, 'H1', 'X') as name FROM virus;

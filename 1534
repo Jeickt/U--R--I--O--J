@@ -1,0 +1,20 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var valor = lines.shift();
+
+while (valor > 0) {
+    for (var i=0; i<valor; i++) {
+        var str = '';
+        for (var j=0; j<valor; j++) {
+            if (i + j === valor - 1)
+                str = str + '2';
+            else if (i === j)
+                str = str + '1';
+            else
+                str = str + '3';
+        }
+        console.log(str);
+    }
+    valor = lines.shift();
+}
